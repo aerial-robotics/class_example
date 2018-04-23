@@ -13,10 +13,10 @@ int main(int argc, char** argv){
 		node.serviceClient<mg_msgs::SetQuadBool>("/mediation_layer/set_quad_shield");
 	mg_msgs::SetQuadBool srv_msg;
 	srv_msg.request.set_bool = 1;
-	srv_msg.request.quad_name = "ron";
+	srv_msg.request.quad_name = "hermione";
 	shield_client.call(srv_msg);
 
-	std::cout << "Ron's shield is on!" << std::endl;
+	std::cout << "hermione's shield is on!" << std::endl;
 
 	// ROS loop that starts callbacks/publishers
 	ros::spin();
