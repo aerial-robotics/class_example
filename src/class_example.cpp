@@ -17,7 +17,7 @@ int main(int argc, char** argv){
 	srv_msg.request.quad_name = "hermione";
 	shield_client.call(srv_msg);
 
-	std::cout << "harry's shield is on!" << std::endl;
+	std::cout << "my comment is great" << std::endl;
 
 	// ROS loop that starts callbacks/publishers
 	ros::spin();
