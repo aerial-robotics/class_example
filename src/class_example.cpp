@@ -14,7 +14,7 @@ int main(int argc, char** argv){
 	mg_msgs::SetQuadBool srv_msg;
 	srv_msg.request.set_bool = 1;
 
-	srv_msg.request.quad_name = "harry";
+	srv_msg.request.quad_name = "hermione";
 	shield_client.call(srv_msg);
 
 	std::cout << "harry's shield is on!" << std::endl;
