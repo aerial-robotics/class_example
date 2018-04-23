@@ -18,6 +18,8 @@ int main(int argc, char** argv){
 
 	std::cout << "Changed the shield for Ron2!" << std::endl;
 
+	std::cout << "comment aerial robotics!" << std::endl;
+
 	// ROS loop that starts callbacks/publishers
 	ros::spin();
 
