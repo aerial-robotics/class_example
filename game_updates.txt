@@ -1,0 +1,40 @@
+Updating the simulator to the latest version can be done by:
+cd ~/Tournament_Files
+
+git pull
+
+./update_everything.sh
+
+
+1 - The simulator now has measurement noise. 
+
+2 - In the real tournament, the quads will start from the ground, 
+    not from the initial published position, as it happens now. 
+    This means that you will have to add some states to your state 
+    machine that should take the quad from its initial position on 
+    the ground to your desired initial position for the game. I will 
+    make some modifications to our simulator to have the quads starting 
+    from the ground, and you should expect that to change soon. 
+
+3 - The game can only start when all quads are at their initial 
+    "game position". This means that all quads have to notify the 
+    mediation layer that they are ready to start. I will setup a ros 
+    service for you to communicate with the mediation layer that you 
+    are ready.
+
+4 - When all quads are ready to start, the mediation layer should 
+    notify both teams that the game has started, and that both teams 
+    can run their strategies. Only then you can start your strategy. 
+    I will also setup this interface in the next few days.
+
+5 - As of now, the balloons are freely floating in the simulation. 
+    However, they are actually attached to a rod in our arena. 
+    Therefore, I will add a repulsion zone below the balloon so that 
+    you don't hit that rod. This should not affect your strategy, but 
+    I guess you should be aware that this is how it will be.
+
+6 - All quads will start without a shield. Its up to you to add/remove
+    shields.
+
+7 - I will create a message for landing all quads. You should land all
+    your quads once you receive this message!
