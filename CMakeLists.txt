@@ -33,3 +33,12 @@ add_dependencies(class_example mg_msgs_generate_messages_cpp)
 
 install(TARGETS class_example
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+add_executable(callback_example 
+               src/callback_example.cpp)
+target_link_libraries(callback_example ${catkin_LIBRARIES})
+add_dependencies(callback_example ${catkin_EXPORTED_TARGETS})
+add_dependencies(callback_example mg_msgs_generate_messages_cpp)
+
+install(TARGETS callback_example
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
