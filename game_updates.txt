@@ -38,3 +38,5 @@ git pull
 
 7 - I will create a message for landing all quads. You should land all
     your quads once you receive this message!
+
+8 - Removed the reset service

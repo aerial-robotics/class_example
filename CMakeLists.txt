@@ -42,3 +42,14 @@ add_dependencies(callback_example mg_msgs_generate_messages_cpp)
 
 install(TARGETS callback_example
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+
+
+add_executable(land_quads_example 
+               src/land_quads_example.cpp)
+target_link_libraries(land_quads_example ${catkin_LIBRARIES})
+add_dependencies(land_quads_example ${catkin_EXPORTED_TARGETS})
+add_dependencies(land_quads_example mg_msgs_generate_messages_cpp)
+
+install(TARGETS land_quads_example
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
